@@ -12,6 +12,24 @@
             Console.WriteLine(mem1.Describe());
             Console.WriteLine(mem2.Describe());
             Console.WriteLine(mem3.Describe());
+
+            Membership membership1 = new Membership(mem1, 5000, 2);
+            Membership membership2 = new Membership(mem2, 5000, 5);
+            membership1.TotalCost();
+            membership2.TotalCost();
+            membership1.Extend(1);
+            membership2.Extend(4);
+            membership1.TotalCost();
+            membership2.TotalCost();
+
+            Gym gym1 = new Gym("név1");
+            Gym gym2 = new Gym("név2");
+
+            Console.WriteLine(gym1.TotalIncome());
+
+            mem1.Describe();
+
+            Console.WriteLine(gym1.BestValue());
         }
     }
 }
